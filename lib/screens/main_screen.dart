@@ -22,7 +22,7 @@ class _MainScreenState extends State<MainScreen> {
   Future<void> _loadRecord() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      recordCorrectAnswers = prefs.getInt('lastCorrectAnswers') ?? 0;
+      recordCorrectAnswers = prefs.getInt('bestCorrectAnswers') ?? 0;
     });
   }
 

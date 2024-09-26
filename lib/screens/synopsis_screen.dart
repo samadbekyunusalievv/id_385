@@ -74,7 +74,10 @@ class _SynopsisScreenState extends State<SynopsisScreen> {
 
   Future<void> _saveLastResult() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setInt('lastCorrectAnswers', correctAnswers);
+    int bestCorrectAnswers = prefs.getInt('bestCorrectAnswers') ?? 0;
+    if (correctAnswers > bestCorrectAnswers) {
+      await prefs.setInt('bestCorrectAnswers', correctAnswers);
+    }
   }
 
   void loadQuestion() {
@@ -203,7 +206,7 @@ class _SynopsisScreenState extends State<SynopsisScreen> {
       onWillPop: _onWillPop,
       child: Scaffold(
         appBar: CustomAppBar(
-          title: 'Synopsis Game',
+          title: 'Synopsis',
           showBackButton: true,
           showSettingsIcon: true,
           onBackButtonPressed: () {

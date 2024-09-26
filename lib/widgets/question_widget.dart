@@ -78,24 +78,28 @@ class QuestionWidget extends StatelessWidget {
                     height: 159.h,
                     fit: BoxFit.contain,
                   ),
-                  SizedBox(height: isAnswered ? 45.h : 10.h),
-                  Text(
-                    isAnswered
-                        ? (isCorrect
-                            ? "That's the right answer!"
-                            : "This is the wrong answer...")
-                        : currentQuestion.description,
-                    style: GoogleFonts.crimsonText(
-                      textStyle: TextStyle(
-                        fontSize: 24.sp,
-                        fontWeight: FontWeight.w400,
-                        height: 1.1.h,
-                        color: Colors.black,
+                  SizedBox(height: 15.h),
+                  Container(
+                    height: 100.h,
+                    alignment: Alignment.center,
+                    child: Text(
+                      isAnswered
+                          ? (isCorrect
+                              ? "That's the right answer!"
+                              : "This is the wrong answer...")
+                          : currentQuestion.description,
+                      style: GoogleFonts.crimsonText(
+                        textStyle: TextStyle(
+                          fontSize: 24.r,
+                          fontWeight: FontWeight.w400,
+                          height: 1.1.h,
+                          color: Colors.black,
+                        ),
                       ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
-                  SizedBox(height: isAnswered ? 51.h : 15.h),
+                  SizedBox(height: 15.h),
                   if (isAnswered && isCorrect) ...[
                     CustomAnswerButton(
                       text: currentQuestion.answer,

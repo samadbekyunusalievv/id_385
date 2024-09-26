@@ -17,19 +17,6 @@ class ResultWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String performanceText = '';
-    if (correctAnswers <= 10) {
-      performanceText = 'Poor!';
-    } else if (correctAnswers <= 20) {
-      performanceText = 'Fair!';
-    } else if (correctAnswers <= 30) {
-      performanceText = 'Not bad!';
-    } else if (correctAnswers <= 40) {
-      performanceText = 'Very good!';
-    } else {
-      performanceText = 'Excellent!';
-    }
-
     return SingleChildScrollView(
       physics: NeverScrollableScrollPhysics(),
       child: Column(
@@ -77,12 +64,12 @@ class ResultWidget extends StatelessWidget {
           ),
           SizedBox(height: 25.h),
           Text(
-            performanceText,
+            'Not bad!',
             style: GoogleFonts.crimsonText(
               textStyle: TextStyle(
                 fontSize: 32.r,
-                fontWeight: FontWeight.w700,
-                height: 35.2.h / 32.h,
+                fontWeight: FontWeight.w400,
+                height: 35.2 / 32,
                 color: Colors.black,
               ),
             ),
@@ -101,7 +88,7 @@ class ResultWidget extends StatelessWidget {
                       'Play again?',
                       style: GoogleFonts.crimsonText(
                         textStyle: TextStyle(
-                          fontSize: 20.r,
+                          fontSize: 20.sp,
                           fontWeight: FontWeight.w700,
                           height: 26.h / 20.h,
                           color: Color.fromRGBO(85, 73, 209, 1),
@@ -144,7 +131,7 @@ class ResultWidget extends StatelessWidget {
               'Exit',
               style: GoogleFonts.crimsonText(
                 textStyle: TextStyle(
-                  fontSize: 20.r,
+                  fontSize: 20.sp,
                   fontWeight: FontWeight.w700,
                   height: 26.h / 20.h,
                   color: Color.fromRGBO(85, 73, 209, 1),

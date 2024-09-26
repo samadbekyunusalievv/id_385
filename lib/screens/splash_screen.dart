@@ -124,7 +124,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 30.h),
+              SizedBox(height: 25.h),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16.w),
                 child: Row(
@@ -143,7 +143,7 @@ class _SplashScreenState extends State<SplashScreen> {
                             fontSize: 14.sp,
                             fontWeight: FontWeight.w400,
                             height: 18.2 / 14,
-                            color: Color.fromRGBO(85, 73, 209, 1),
+                            color: Colors.black,
                           ),
                         ),
                       ),
@@ -161,7 +161,7 @@ class _SplashScreenState extends State<SplashScreen> {
                             fontSize: 14.sp,
                             fontWeight: FontWeight.w400,
                             height: 18.2 / 14,
-                            color: Color.fromRGBO(85, 73, 209, 1),
+                            color: Colors.black,
                           ),
                         ),
                       ),

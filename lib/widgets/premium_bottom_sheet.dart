@@ -23,19 +23,7 @@ class PremiumBottomSheet extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Align(
-                alignment: Alignment.topRight,
-                child: IconButton(
-                  icon: Icon(
-                    Icons.close,
-                    color: Colors.white,
-                    size: 20.r,
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
-              ),
+              SizedBox(height: 30.h),
               Text(
                 "No more ADS",
                 style: GoogleFonts.crimsonText(
@@ -109,6 +97,22 @@ class PremiumBottomSheet extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+        ),
+        Positioned(
+          top: 0,
+          right: 0,
+          child: IconButton(
+            padding: EdgeInsets.zero,
+            constraints: BoxConstraints(),
+            icon: Icon(
+              Icons.close,
+              color: Colors.white,
+              size: 24.r,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
         ),
         Positioned(
